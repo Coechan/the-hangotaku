@@ -8,6 +8,59 @@ main, .main-screen , .add-screen , .game-screen{
     align-items: center;
 }
 
+.main-screen h1{
+    margin-top: 10%;
+    font-size: 35px;
+    letter-spacing: 20px;
+    text-decoration: underline 2px pink;
+}
+
+.main-screen p {
+    margin: 5% 0 5% 0;
+    font-size: 25px;
+    letter-spacing: 3px;
+}
+
+.start , .add-word{
+    width: 30%;
+    font-size: 30px;
+}
+
+.add-word, .cancel, .quit{
+    margin: 2%;
+    border: none;
+    padding: 2%;
+    border-radius: 50px;
+    background-color: whitesmoke;
+    width: 45%;
+    color:pink;
+    font-size: 30px;
+}
+
+.add-word:hover, .cancel:hover, .quit:hover{
+    background-color: rgb(196, 194, 194);
+}
+
+.start, .save , .newgame{
+    margin: 2%;
+    border: none;
+    padding: 2%;
+    border-radius: 50px;
+    background-color: pink;
+    width: 45%;
+    font-size: 30px;
+    color: whitesmoke;
+}
+
+.start:hover , .save:hover , .newgame:hover{
+    background-color: rgb(200, 151, 159);
+}
+
+.start , .add-word{
+    width: 30%;
+    font-size: 30px;
+}
+
 .random-anime{
     width: 100%;
     display: flex;
@@ -65,37 +118,6 @@ main, .main-screen , .add-screen , .game-screen{
     display: flex;
     justify-content: space-around;
     align-items: center;
-}
-
-.add-word, .cancel, .quit{
-    margin: 2%;
-    border: none;
-    padding: 2%;
-    border-radius: 50px;
-    background-color: whitesmoke;
-    width: 45%;
-    color:pink;
-    font-size: 30px;
-}
-
-.add-word:hover, .cancel:hover, .quit:hover{
-    background-color: rgb(196, 194, 194);
-}
-
-.start, .save , .newgame{
-    margin: 2%;
-    border: none;
-    padding: 2%;
-    border-radius: 50px;
-    background-color: pink;
-    width: 45%;
-    font-size: 30px;
-    color: whitesmoke;
-}
-
-.start:hover , .save:hover , .newgame:hover{
-    background-color: rgb(200, 151, 159);
-
 }
 
 textarea{
