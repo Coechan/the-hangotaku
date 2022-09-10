@@ -130,6 +130,17 @@ textarea{
 }
 
 @media screen and (max-width:1024px) {
+    
+    .main-screen h1{
+        text-align: center;
+        font-size: 35px;
+    }
+    
+    .main-screen p {
+        font-size: 20px;
+        text-align: center;
+    }
+
     .add-word, .start{
         width: 65%;
     }
@@ -163,9 +174,17 @@ textarea{
 }
 
 @media screen and (max-width:480px) { 
+   
+    .main-screen h1{
+        font-size: 25px;
+    }
+    .main-screen p{
+        font-size: 18px;
+    }
+
     .add-word, .start{
         width: 65%;
-        font-size: 20px;
+        font-size: 18px;
     }
 
     .save , .cancel , .quit , .newgame{
