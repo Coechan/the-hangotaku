@@ -63,6 +63,9 @@ function showLetters(event){
     if (event.keyCode < 65 || event.keyCode > 90){
         return
     }
+    if (chances == 5){
+        return
+    }
     let char = document.querySelectorAll(".char");
     if (random.includes(event.key.toUpperCase())){
         for(n = 0 ; n < char.length ; n ++){
