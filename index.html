@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./css/style.css" rel="stylesheet">
+    <title>Ahorcado</title>
+</head>
+<body>
+    <main>
+        <div class="main-screen">
+            <button type="button" class="start">
+                Iniciar Juego
+            </button>
+            <button type="button" class="add-word">
+                 Agregar nueva palabra
+            </button>
+        </div>
+
+        <div class="add-screen">
+            <div>
+                <textarea id="text" rows="5" cols="50" placeholder="Inserte su anime aqui"></textarea>
+                <p>Max. 15 letras</p>
+            </div>
+            <div class="buttons">
+                <button type="button" class="save">
+                    Guardar y empezar
+                </button>
+                <button type="button" class="cancel">
+                    Cancelar
+                </button>
+            </div>
+        </div>
+    
+
+        <div class="game-screen">
+            <div>
+                <!-- aca va el ahorcado -->
+                <canvas class="canvas" width="1200" height="100">
+                </canvas>
+            </div>
+            <div class="random-anime">
+            </div>
+            <div class="buttons">
+                <button type="button" class="newgame">
+                    New game
+                </button>
+                <button type="button" class="quit">
+                    Quit
+                </button>
+            </div>
+        </div>
+    </main>
+    <script src="./js/game.js"></script>
+</body>
+</html>

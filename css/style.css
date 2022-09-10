@@ -1,0 +1,72 @@
+
+
+main, .main-screen , .add-screen , .game-screen{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.random-anime{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+ .anime{
+    font-size: 45px;
+    margin: 5px;
+    width: 55px;
+    text-align: center;
+    border-bottom: pink solid 2px;
+ }
+
+.buttons{
+    margin-top: 10%;
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.add-word, .cancel, .quit{
+    margin: 2%;
+    border: none;
+    padding: 2%;
+    border-radius: 50px;
+    background-color: whitesmoke;
+    width: 45%;
+    color:pink;
+    font-size: 30px;
+}
+
+.add-word:hover, .cancel:hover, .quit:hover{
+    background-color: rgb(196, 194, 194);
+}
+
+.start, .save , .newgame{
+    margin: 2%;
+    border: none;
+    padding: 2%;
+    border-radius: 50px;
+    background-color: pink;
+    width: 45%;
+    font-size: 30px;
+    color: whitesmoke;
+}
+
+.start:hover , .save:hover , .newgame:hover{
+    background-color: rgb(200, 151, 159);
+
+}
+
+textarea{
+    font-size: 30px;
+    padding: 2%;
+    color: pink;
+    border: none;
+    resize: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
