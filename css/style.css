@@ -22,9 +22,44 @@ main, .main-screen , .add-screen , .game-screen{
     text-align: center;
     border-bottom: pink solid 2px;
  }
+ 
+ .anime p {
+    margin: 0;
+ }
+.hangotaku{
+    height: 510px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ img{
+    width: 400px;
+ }
 
+ .loser{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 5%;
+ }
+
+ .loser p {
+    font-size: 55px;
+    color: palevioletred;
+    margin: 0;
+
+ }
+ .wrong-letters{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+    letter-spacing: 30px;
+    color: palevioletred;
+    margin-top:30px;
+ }
 .buttons{
-    margin-top: 10%;
+    margin-top: 5%;
     width: 50%;
     display: flex;
     justify-content: space-around;

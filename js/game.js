@@ -10,6 +10,8 @@ const text = document.getElementById("text");
 //Random Word Selector
 const animeWord = document.querySelector(".anime");
 const randomAnime = document.querySelector(".random-anime");
+const wrongLetters = document.querySelector(".wrong-letters");
+let chances = 0;
 
 // Buttons Selectors
 const saveButton = document.querySelector(".save");
@@ -19,15 +21,20 @@ const addWordButton = document.querySelector(".add-word");
 const newGameButton = document.querySelector(".newgame");
 const quitButton = document.querySelector(".quit");
 
-// canvas
-const screen = document.querySelector(".canvas");
-const pencil = screen.getContext("2D")
+//img selector
+const firstTry = document.querySelector(".onetry");
+const secondTry = document.querySelector(".twotry");
+const thirdTry = document.querySelector(".threetry");
+const fourthTry = document.querySelector(".fourtry");
+const fiveTry = document.querySelector(".fivetry");
+const loser = document.querySelector(".loser");
 
 // Anime Array
 let random = '';
 const animelist = [
-    "wotakoi" , "horimiya" , "Kaguyasama" , "fruits basket" , "kamisama kiss", "mierukochan" ,"sakuracardcaptor", "toiletboundhanakokun" , "haikyu"];
-
+    "wotakoi" , "horimiya" , "Kaguyasama" , "fruits basket" , "kamisama kiss", "mierukochan" ,"sakuracardcaptor", "toiletboundhanakokun" , "haikyu", "mob psycho", "one piece" , "attack on titan" , "demon slayer" , "nana", "inuyasha", "bleach" , "fullmetal alchemist", "given" , "jujutsu kaisen" ];
+// letters array
+const abc = [ "a", "b" , "c" , "d" , "e" , "f" , "g" , "h" , "i" , "j" , "k" ,"m", "n" , "o", "p" , "q" ,"r" ,"s" , "t" , "u" ,"v" , "w" , "k" , "y" , "z"]
 // Functions
 function addAnime(event){
     let newAnime = text.value;
@@ -47,21 +54,83 @@ function showAnime(event){
     let indexRandom = Math.floor(Math.random() * animelist.length);
     random= animelist[indexRandom].toUpperCase();
     secretAnime();
+    chances = 0;
+    hangman();
+}
+
+function showLetters(event){
+    if (event.keyCode < 65 || event.keyCode > 90){
+        return
+    }
+    let char = document.querySelectorAll(".char");
+    if (random.includes(event.key.toUpperCase())){
+        for(n = 0 ; n < char.length ; n ++){
+            if(char[n].innerHTML == event.key.toUpperCase()){
+        char[n].style.visibility = "";}}
+    }else {
+        let wrongLetters = document.querySelector(".wrong-letters");
+        let wrongList = document.createElement("div");
+        wrongList.className = "wrong-list"
+        wrongLetters.appendChild(wrongList);
+        wrongList.innerHTML = event.key.toUpperCase();
+        chances += 1;
+        hangman();
+    }
 }
 
 function secretAnime(){
     for (let j=0 ; j < random.length ; j ++){
         let div = document.createElement("div");
+        let p = document.createElement("p");
+        div.className = "anime";
+        p.className = "char";
         randomAnime.appendChild(div);
-        div.className = "anime"
-        div.innerHTML = random[j];
+        div.appendChild(p);
+        p.innerHTML = random[j];
+        p.style.visibility = "hidden";
     }
 }
 
 function erasedAnime(){
+    let wrongLettersList = document.querySelectorAll(".wrong-list");
     for (let j=0 ; j < random.length ; j ++){
-    const div = document.querySelector(".anime");
-    randomAnime.removeChild(div);
+        const div = document.querySelector(".anime");
+        randomAnime.removeChild(div);
+    }
+    for( let c = 0 ; c < wrongLettersList.length ; c++){
+        const wrongList = document.querySelector(".wrong-list");
+        wrongLetters.removeChild(wrongList);
+    }
+}
+
+function hangman(){
+    if (chances == 0){
+        firstTry.style.display = "flex";
+        secondTry.style.display = "none";
+        thirdTry.style.display = "none"; 
+        fourthTry.style.display = "none";
+        fiveTry.style.display = "none"; 
+        loser.style.display = "none"; 
+    }
+    if (chances == 1){
+        firstTry.style.display = "none";
+        secondTry.style.display = "flex";
+    }
+    if (chances == 2){
+        secondTry.style.display = "none";
+        thirdTry.style.display = "flex"; 
+    }
+    if (chances == 3){
+        thirdTry.style.display = "none"; 
+        fourthTry.style.display = "flex";
+    }
+    if (chances == 4){
+        fourthTry.style.display = "none";
+        fiveTry.style.display = "flex"; 
+    }
+    if (chances == 5){
+        fiveTry.style.display = "none"; 
+        loser.style.display = "flex";
     }
 }
 
@@ -75,6 +144,7 @@ function gameScreenShow(event){
     addScreen.style.display = 'none';
     mainScreen.style.display = 'none';
     gameScreen.style.display = 'flex';
+    document.onkeydown = showLetters;
 }
 
 function AddScreenShow(event){
@@ -97,15 +167,6 @@ startButton.onclick = showAnime;
 addWordButton.onclick = AddScreenShow;
 saveButton.onclick = addAnime;
 newGameButton.onclick = showAnime;
-
-
-
-
-
-
-
-
-
 
 
 
