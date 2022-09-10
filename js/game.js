@@ -33,16 +33,17 @@ const loser = document.querySelector(".loser");
 let random = '';
 const animelist = [
     "wotakoi" , "horimiya" , "Kaguyasama" , "fruits basket" , "kamisama kiss", "mierukochan" ,"sakuracardcaptor", "toiletboundhanakokun" , "haikyu", "mob psycho", "one piece" , "attack on titan" , "demon slayer" , "nana", "inuyasha", "bleach" , "fullmetal alchemist", "given" , "jujutsu kaisen" ];
-// letters array
-const abc = [ "a", "b" , "c" , "d" , "e" , "f" , "g" , "h" , "i" , "j" , "k" ,"m", "n" , "o", "p" , "q" ,"r" ,"s" , "t" , "u" ,"v" , "w" , "k" , "y" , "z"]
+
 // Functions
 function addAnime(event){
     let newAnime = text.value;
     if (animelist.includes(newAnime)){
+        text.value = "";
         gameScreenShow();
         showAnime();
     } else {
         animelist.push(newAnime);
+        text.value = "";
         gameScreenShow();
         showAnime();
     }
@@ -67,7 +68,7 @@ function showLetters(event){
         for(n = 0 ; n < char.length ; n ++){
             if(char[n].innerHTML == event.key.toUpperCase()){
         char[n].style.visibility = "";}}
-    }else {
+    } else {
         let wrongLetters = document.querySelector(".wrong-letters");
         let wrongList = document.createElement("div");
         wrongList.className = "wrong-list"
