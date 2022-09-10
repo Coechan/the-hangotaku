@@ -159,6 +159,9 @@ textarea{
         width: 95%;
     }
 
+    .hangotaku{
+        height: 350px;
+    }
     .anime{
         font-size: 25px;
         width: 45px;
@@ -212,9 +215,9 @@ textarea{
     }
 
     .anime{
-        font-size: 15px;
-        width: 30px;
-        margin: 5%;
+        font-size: 22px;
+        width: 21px;
+        margin: 3%;
      }
 
      .loser p {
