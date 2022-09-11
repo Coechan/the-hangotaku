@@ -87,9 +87,9 @@ main, .main-screen , .add-screen , .game-screen{
     align-items: center;
 }
 
-input{
+/* input{
     visibility: hidden;
-}
+} */
 
  img{
     width: 400px;
@@ -257,4 +257,8 @@ textarea::placeholder{
      }
 
 
+}
+
+#hiddenInput:focus {
+    border: 10px solid red;
 }
