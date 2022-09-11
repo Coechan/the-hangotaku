@@ -199,6 +199,7 @@ textarea::placeholder{
    
     .main-screen h1{
         font-size: 25px;
+        text-decoration: underline pink 3px;
     }
     .main-screen p{
         font-size: 18px;
@@ -222,6 +223,10 @@ textarea::placeholder{
 
     img{
         width: 260px;
+    }
+
+    .onetry {
+        width: 195px;
     }
 
     .random-anime{
