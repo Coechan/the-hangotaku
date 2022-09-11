@@ -188,6 +188,10 @@ textarea::placeholder{
         height: 350px;
     }
 
+    img{
+        width: 275px;
+     }
+
     .onetry {
         width: 195px;
     }
