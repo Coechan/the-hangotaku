@@ -95,14 +95,14 @@ main, .main-screen , .add-screen , .game-screen{
     width: 275px;
 } 
 
- .loser{
+ .loser , .winner{
     display: flex;
     flex-direction: column;
     text-align: center;
     margin-bottom: 5%;
  }
 
- .loser p {
+ .loser p , .winner p{
     font-size: 55px;
     color: palevioletred;
     margin: 0;
@@ -117,6 +117,11 @@ main, .main-screen , .add-screen , .game-screen{
     color: palevioletred;
     margin-top:30px;
  }
+
+ .keyboard{
+    display: none;
+ }
+
 .buttons{
     margin-top: 5%;
     width: 50%;
@@ -167,7 +172,7 @@ textarea::placeholder{
 
     .save , .cancel , .quit , .newgame{
         width: 110%;
-        margin: 10%;
+        margin: 5%;
     }
 
     .buttons{
@@ -182,6 +187,11 @@ textarea::placeholder{
     .hangotaku{
         height: 350px;
     }
+
+    .onetry {
+        width: 195px;
+    }
+
     .anime{
         font-size: 25px;
         width: 45px;
@@ -194,6 +204,34 @@ textarea::placeholder{
      .wrong-letters{
         font-size: 25px;
      }
+
+     .keyboard{
+        width: 100%;
+        margin-top: 5%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+     }
+     .first-row ,.second-row , .third-row{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+     }
+     .char-button{
+        background-color: pink;
+        width: 40px;
+        border: none;
+        border-radius: 13px;
+        padding: 7px;
+        margin: 5px;
+        font-size: 24px;
+     }
+
+     .char-button:hover{
+        background-color: palevioletred;
+    }
 }
 
 @media screen and (max-width:480px) { 
@@ -252,5 +290,15 @@ textarea::placeholder{
         font-size: 20px;
      }
 
-
+     .char-button{
+    background-color: pink;
+    width: 26px;
+    border: none;
+    border-radius: 8px;
+    padding: 5px;
+    margin: 4px;
+    font-size: 19px;
+    }
 }
+
+
