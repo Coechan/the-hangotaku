@@ -33,7 +33,7 @@ const loser = document.querySelector(".loser");
 let random = '';
 let wrongLettersArray = [];
 const animelist = [
-    "wotakoi" , "horimiya" , "Kaguyasama" , "fruits basket" , "kamisama kiss", "mierukochan" ,"sakura cardcaptor", "toilet bound hanakokun" , "haikyu", "mob psycho", "one piece" , "attack on titan" , "demon slayer" , "nana", "inuyasha", "bleach" , "fullmetal alchemist", "given" , "jujutsu kaisen" ];
+    "wotakoi" , "horimiya" , "Kaguyasama" , "fruits basket" , "kamisama kiss", "mierukochan" ,"sakura cardcaptor", "toilet bound hanakokun" , "haikyu", "mob psycho", "one piece" , "attack on titan" , "demon slayer" , "nana", "inuyasha", "bleach" , "fullmetal alchemist", "given" , "jujutsu kaisen" , "Seaside Stranger" , "Sasaki and Miyano", "spy x family" ];
 
 // Functions
 function addAnime(event){
