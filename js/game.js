@@ -31,8 +31,9 @@ const loser = document.querySelector(".loser");
 
 // Anime Array
 let random = '';
+let wrongLettersArray = [];
 const animelist = [
-    "wotakoi" , "horimiya" , "Kaguyasama" , "fruits basket" , "kamisama kiss", "mierukochan" ,"sakuracardcaptor", "toiletboundhanakokun" , "haikyu", "mob psycho", "one piece" , "attack on titan" , "demon slayer" , "nana", "inuyasha", "bleach" , "fullmetal alchemist", "given" , "jujutsu kaisen" ];
+    "wotakoi" , "horimiya" , "Kaguyasama" , "fruits basket" , "kamisama kiss", "mierukochan" ,"sakura cardcaptor", "toilet bound hanakokun" , "haikyu", "mob psycho", "one piece" , "attack on titan" , "demon slayer" , "nana", "inuyasha", "bleach" , "fullmetal alchemist", "given" , "jujutsu kaisen" ];
 
 // Functions
 function addAnime(event){
@@ -60,25 +61,32 @@ function showAnime(event){
 }
 
 function showLetters(event){
+    let char = document.querySelectorAll(".char");
     if (event.keyCode < 65 || event.keyCode > 90){
         return
     }
-    if (chances == 5){
-        return
-    }
-    let char = document.querySelectorAll(".char");
     if (random.includes(event.key.toUpperCase())){
-        for(n = 0 ; n < char.length ; n ++){
+        for(let n = 0 ; n < char.length ; n ++){
             if(char[n].innerHTML == event.key.toUpperCase()){
-        char[n].style.visibility = "";}}
+                char[n].style.visibility = "";
+            }}
     } else {
-        let wrongLetters = document.querySelector(".wrong-letters");
-        let wrongList = document.createElement("div");
-        wrongList.className = "wrong-list"
-        wrongLetters.appendChild(wrongList);
-        wrongList.innerHTML = event.key.toUpperCase();
-        chances += 1;
-        hangman();
+        if (wrongLettersArray.includes(event.key)) {
+            return;
+        } else {
+            let wrongLetters = document.querySelector(".wrong-letters");
+            let wrongList = document.createElement("div");
+            wrongLetters.appendChild(wrongList);
+            wrongList.className = "wrong-list";
+            wrongList.innerHTML = event.key.toUpperCase();
+            wrongLettersArray.push(event.key);
+            chances += 1;
+            hangman();
+        }
+    }
+    if (chances == 5){
+        for(let g = 0 ; g < char.length ; g ++){
+            char[g].style.visibility = "";}
     }
 }
 
@@ -149,6 +157,7 @@ function gameScreenShow(event){
     mainScreen.style.display = 'none';
     gameScreen.style.display = 'flex';
     document.onkeydown = showLetters;
+    wrongLettersArray = [];
 }
 
 function AddScreenShow(event){

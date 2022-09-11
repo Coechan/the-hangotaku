@@ -90,6 +90,10 @@ main, .main-screen , .add-screen , .game-screen{
     width: 400px;
  }
 
+.onetry{
+    width: 275px;
+} 
+
  .loser{
     display: flex;
     flex-direction: column;
@@ -121,12 +125,27 @@ main, .main-screen , .add-screen , .game-screen{
 }
 
 textarea{
-    font-size: 30px;
-    padding: 2%;
-    color: pink;
-    border: none;
-    resize: none;
     font-family: Arial, Helvetica, sans-serif;
+    margin-top: 14%;
+    font-size: 30px;
+    padding: 3% 2%;
+    color: palevioletred;
+    border: solid palevioletred 1px;
+    border-radius: 7px;
+    resize: none;
+    text-transform: uppercase;
+}
+
+textarea::placeholder{
+    color: pink;
+    font-size: 20px;
+    letter-spacing: 10px;
+}
+
+.alert{
+    color: palevioletred;
+    letter-spacing: 4px;
+
 }
 
 @media screen and (max-width:1024px) {
