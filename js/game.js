@@ -159,8 +159,8 @@ function gameScreenShow(event){
     gameScreen.style.display = 'flex';
     document.onkeydown = showLetters;
     document.ontouchend = () => hiddenInput.focus();
-    hiddenInput.onkeydown = showLetters;
     wrongLettersArray = [];
+    hiddenInput.focus();
 }
 
 function AddScreenShow(event){
