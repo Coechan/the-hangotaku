@@ -6,6 +6,7 @@ const gameScreen = document.querySelector(".game-screen");
 
 // Input Selector
 const text = document.getElementById("text");
+const hiddenInput = document.getElementById("hiddenInput");
 
 //Random Word Selector
 const animeWord = document.querySelector(".anime");
@@ -158,6 +159,7 @@ function gameScreenShow(event){
     gameScreen.style.display = 'flex';
     document.onkeydown = showLetters;
     wrongLettersArray = [];
+    hiddenInput.focus();
 }
 
 function AddScreenShow(event){
@@ -180,6 +182,8 @@ startButton.onclick = showAnime;
 addWordButton.onclick = AddScreenShow;
 saveButton.onclick = addAnime;
 newGameButton.onclick = showAnime;
+// touchstart
+
 
 
 
