@@ -100,7 +100,7 @@ function showLetters(event){
         for(let g = 0 ; g < char.length ; g ++){
             char[g].style.visibility = "";}
     }
-    if (random.replace(" ", "").length == correct){
+    if (random.replaceAll(" ", "").length == correct){
         firstTry.style.display = "none";
         secondTry.style.display = "none";
         thirdTry.style.display = "none"; 
@@ -204,7 +204,7 @@ function keyboard(event){
         for(let g = 0 ; g < char.length ; g ++){
             char[g].style.visibility = "";}
     }
-    if (random.replace(" ", "").length == correct){
+    if (random.replaceAll(" ", "").length == correct){
         firstTry.style.display = "none";
         secondTry.style.display = "none";
         thirdTry.style.display = "none"; 
