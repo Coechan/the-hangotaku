@@ -37,8 +37,7 @@ const winner = document.querySelector(".winner");
 let random = '';
 let wrongLettersArray = [];
 const animelist = [
-    "wotakoi" , "horimiya" , "Kaguyasama" , "fruits basket" , "kamisama kiss", "mierukochan" ,"sakura cardcaptor", "toilet bound hanakokun" , "haikyu", "mob psycho", "one piece" , "attack on titan" , "demon slayer" , "nana", "inuyasha", "bleach" , "fullmetal alchemist", "given" , "jujutsu kaisen" , "Seaside Stranger" , "Sasaki and Miyano", "spy x family" ];
-
+    "wotakoi" , "horimiya" , "Kaguyasama" , "fruits basket" , "kamisama kiss", "mierukochan" ,"sakura cardcaptor", "toilet bound hanakokun" , "haikyu", "mob psycho", "one piece" , "attack on titan" , "demon slayer" , "nana", "inuyasha", "bleach" , "fullmetal alchemist", "given" , "jujutsu kaisen" , "Seaside Stranger" , "Sasaki and Miyano", "spy x family", "chainsaw man", "naruto", "hunterxhunter" , "orange" , "my neighbor totoro" , "ponyo on the cliff by the sea", "princes mononoke", "pokemon", "kikis delivery service", "komi cant communicate", "ao haru ride" , "toradora", "sword art online" , "spirited away", "ranking of king" , "your name" , "weathering with you" ];
 // Functions
 function addAnime(event){
     let newAnime = text.value;
