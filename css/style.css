@@ -154,6 +154,13 @@ textarea::placeholder{
 
 }
 
+footer{
+    color: pink;
+    font-family: 'Gaegu', cursive;
+    margin-top: 10%;
+    text-align: center;
+}
+
 @media screen and (max-width:1024px) {
     
     .main-screen h1{
